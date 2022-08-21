@@ -1,0 +1,90 @@
+<!--
+<!DOCTYPE html>
+
+<head>
+  <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  <link rel="preload" href="css/styles.css" as="style">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div style="height: 60%; width: 40%; margin-top:5%; margin-left:10%" id="webchat" role="main"></div>
+  <script>
+    // Set  the CSS rules.
+    const styleSet = window.WebChat.createStyleSet({
+      rootHeight: '100%',
+      rootWidth: '50%',
+      backgroundColor: '130, 147, 147 '
+
+
+
+    });
+
+    styleSet.textContent = {
+         ...styleSet.textContent,
+         fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+         fontWeight: 'bold'
+      };
+
+
+    window.WebChat.renderWebChat({
+      directLine: window.WebChat.createDirectLine({
+        token: 'ew0KICAiYWxnIjogIlJTMjU2IiwNCiAgImtpZCI6ICJlTG1Ja0JEQXdMZHF1cG5EZGVhenJab3RZMzAiLA0KICAieDV0IjogImVMbUlrQkRBd0xkcXVwbkRkZWF6clpvdFkzMCIsDQogICJ0eXAiOiAiSldUIg0KfQ.ew0KICAiYm90IjogIm1hZ2dpZTMiLA0KICAic2l0ZSI6ICIxRG5ZeHFOU05TTSIsDQogICJjb252IjogIkFLQ1FGTW13aEg4S1hUVVl6Z3A3VnAtbyIsDQogICJuYmYiOiAxNjMxNDg4NDczLA0KICAiZXhwIjogMTYzMTQ5MjA3MywNCiAgImlzcyI6ICJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLA0KICAiYXVkIjogImh0dHBzOi8vZGlyZWN0bGluZS5ib3RmcmFtZXdvcmsuY29tLyINCn0.iYrD_W02dwP7UC2WK6tlc-3rIy-eUJcd5_ivnvMOF2wtVi4MikNxjMEzyzHqht9J-fA_ojeY8Iwm5YRyQJxZUE9zdVVIgH0-T4q3PeYA3jWdgl9tc6jPu5KMHEFSLdpmZho2xc4xH-Z6NLreBAiuLNLK4XRTY-ZjaVZQX9e8IHjXWvh-XuDC5qQlrQT02ZGFNyP-_RDNSFTfTONTD3V5n0cBg8PJP24s6eLFC6ut9__8SeMnEimr5VYKiARkBlGpXxMZpGYbCgsh4sG1jaLLKRw4AosA8ify5m9sGRPPqG42o4bSSsk8OjeZjlD7pNNXxrRiq-dYWmIg2gR-Ed5VbA'
+      }),
+      styleSet
+    }, document.getElementById('webchat'));
+
+  </script>
+</body>-->
+<!--
+  
+-->
+<!DOCTYPE html>
+<head>
+  
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <link rel="preload" href="css/styles.css" as="style">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body >
+  
+  <div style="min-width: 400px; width: 100%; min-height: 500px;" id="webchat" role="main"></div>
+  
+  <script>
+     
+     // Set  the CSS rules.
+     const styleSet = window.WebChat.createStyleSet({
+         bubbleBackground: 'rgba(219, 224, 224, .1)',
+         bubbleFromUserBackground: 'rgba(3, 222, 252 , .1)',
+         rootHeight: '50%',
+         rootWidth: '50%',
+         backgroundColor: 'white'
+      });
+
+      // After generated, you can modify the CSS rules.
+      // Change font family and weight. 
+      styleSet.textContent = {
+         ...styleSet.textContent,
+         fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+         fontWeight: 'bold'
+      };
+
+    // Set the avatar options. 
+     const avatarOptions = {
+      botAvatarImage: 'img/buhousmp.jpg',
+   botAvatarInitials: 'BOT',
+   userAvatarImage: 'img/perfiling.jpg',
+   userAvatarInitials: 'AL'
+         };
+
+    window.WebChat.renderWebChat({
+      directLine: window.WebChat.createDirectLine({
+        token: 'ew0KICAiYWxnIjogIlJTMjU2IiwNCiAgImtpZCI6ICJlTG1Ja0JEQXdMZHF1cG5EZGVhenJab3RZMzAiLA0KICAieDV0IjogImVMbUlrQkRBd0xkcXVwbkRkZWF6clpvdFkzMCIsDQogICJ0eXAiOiAiSldUIg0KfQ.ew0KICAiYm90IjogIkNsYXNzeUJvdF8iLA0KICAic2l0ZSI6ICJ4Nno2OU5KTV9FVSIsDQogICJjb252IjogIjVRbzZvZXV3OGVLNU1UcWcwQjRMcTgtbyIsDQogICJuYmYiOiAxNjMxODE4MjY5LA0KICAiZXhwIjogMTYzMTgyMTg2OSwNCiAgImlzcyI6ICJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLA0KICAiYXVkIjogImh0dHBzOi8vZGlyZWN0bGluZS5ib3RmcmFtZXdvcmsuY29tLyINCn0.kDW2XOtHULC98ioQJYkpXMijwtIYeteZndMG9PAOoMwcgKUABwKkOcVIrNl3jK6sY39gSLYmvncWoY-CeQ_-4WpgU4IVxez2pS2JewyeghzARHP_a9tvFyW-QBKw6TT2-iee-YwxeAoSMp8U6c3USp2P1Qp9fhkoekEyJp2caJk6zW2t1Kz1hb2Lcv_MJEF4L01W3_8lmoeh_2Jj3iR6qoApOnLeYUudfHzdaDkBgFZCbahCErkv2tUrGrbvCbzR3vScPlbZIRhEEVSY-S-FEa9OxA8rKT0q0hMa_5QMeMqrkn8-gX6kDKgF6z89q1f1uSikxAvF19I2G5gTp51rYg'}),
+      styleSet,
+      styleOptions: avatarOptions
+    }, document.getElementById('webchat'));
+    
+  </script>
+
+  <div style="background-color: red;">hola</div>
+</body>

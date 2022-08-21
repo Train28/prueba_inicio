@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="BotChat/botchat.css" rel="stylesheet" />
+    <script src="BotChat/botchat.js"></script>
+    <style>
+        #mychat {
+            margin: 10px;
+            position: fixed;
+            bottom: 30px;
+            right: 10px;
+            z-index: 1000000;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Hello World</h1>
+        <!--other page contents-->
+        <img id="mychat" src="https://i.stack.imgur.com/RD7i4.png" style="float:right" />
+    </div>
+</body>
+</html>
+<script>
+    (function () {
+        var div = document.createElement("div");
+        document.getElementsByTagName('body')[0].appendChild(div);
+        div.outerHTML = "<div id='botDiv' style='width: 400px; height: 0px; margin:10px; position: fixed; bottom: 0; right:0; z-index: 1000;><div  id='botTitleBar' style='height: 40px; width: 400px; position:fixed; cursor: pointer;'></div></div>";
+        BotChat.App({
+            directLine: { secret: '{ew0KICAiYWxnIjogIlJTMjU2IiwNCiAgImtpZCI6ICJlTG1Ja0JEQXdMZHF1cG5EZGVhenJab3RZMzAiLA0KICAieDV0IjogImVMbUlrQkRBd0xkcXVwbkRkZWF6clpvdFkzMCIsDQogICJ0eXAiOiAiSldUIg0KfQ.ew0KICAiYm90IjogIm1hZ2dpZTMiLA0KICAic2l0ZSI6ICIxRG5ZeHFOU05TTSIsDQogICJjb252IjogIkkzUDJuWWp6UjhmQ3FzZ3lZZTJLVmgtbyIsDQogICJuYmYiOiAxNjMxMzQ1MDA0LA0KICAiZXhwIjogMTYzMTM0ODYwNCwNCiAgImlzcyI6ICJodHRwczovL2RpcmVjdGxpbmUuYm90ZnJhbWV3b3JrLmNvbS8iLA0KICAiYXVkIjogImh0dHBzOi8vZGlyZWN0bGluZS5ib3RmcmFtZXdvcmsuY29tLyINCn0.KQNcxicsM06o7cW4NmpuwkT3OiXZLaHo3uuPYKgbpVCKzjCFNfE7H9hIniEL5Q9WLsrf6-PkTh0UOIoJ7qPo43ZysgfUlkVtcdNmoffhSsYOpmZ5S3E52TQaQaBTgVRNms-bmewOkGaZvXApxrPgv8su3wAthMxFFHzTzZwFQ56SLmKe0gSS8zUGBldwUewzAscgg84vRKs8aPuFXjC1JUDQaZsM10zXYBlhCcDanEpSXKvOFD3ZkM0a1JOzhe31dJH6Bv3P3kPHqACLJ-CnHRQn_-YHs0EsSnZqg0EMz1yAvGDoxb4FCtbzC4kPXQb8BVXKZGL_tmqOdxJxqGjyoQ}' },
+            user: { id: '9e4f20fb-4a7d-4c16-b533-c902d45d14e2' },
+            bot: { id: '{/subscriptions/9e4f20fb-4a7d-4c16-b533-c902d45d14e2/resourceGroups/crfar-group/providers/Microsoft.BotService/botServices/maggie3}' }
+        }, document.getElementById("botDiv"));
+
+        document.getElementsByClassName("wc-header")[0].setAttribute("id", "chatbotheader");
+        document.querySelector('body').addEventListener('click', function (e) {
+            e.target.matches = e.target.matches || e.target.msMatchesSelector;
+            if (e.target.matches('#chatbotheader')) {
+                var botDiv = document.querySelector('#botDiv');
+
+                botDiv.style.height = "0px";
+
+                document.getElementById("mychat").style.display = "block";
+            };
+        });
+
+        document.getElementById("mychat").addEventListener("click", function (e) {
+
+            document.getElementById("botDiv").style.height = '500px';
+
+            e.target.style.display = "none";
+        })
+    }());
+</script>

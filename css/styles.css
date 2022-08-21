@@ -1,0 +1,182 @@
+:root{
+    --blanco :#ffffff;
+    --primario:#F1D115;
+    --secundario:#3FD8D7;
+
+}
+
+/*Globales*/
+html{
+    font-size: 62.5%;
+}
+/*esto es para quitar el margen que habia en la pagina*/
+body{
+    font-size: 16px;
+    margin:0;
+    background-image: linear-gradient(to top, white 0%, var(--secundario) );
+
+}
+.sombra{
+    -webkit-box-shadow: 20px -7px 21px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 20px -7px 21px 0px rgba(0,0,0,0.75);
+box-shadow: 20px -7px 21px 0px rgba(0,0,0,0.75);
+background-color: gray;
+border-radius: 1rem;/*Redondea las esquinas*/
+}
+/*Globales-*/
+
+
+h1{
+    font-size: 3.8;
+}
+h2{
+    font-size: 2.8;
+}
+h3{
+    font-size: 1.8;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+    color:var(--primario);
+    font-size: 3.8rem;
+}
+.titulo span{
+    font-size: 2rem;
+    color: red;
+
+}
+.contenedor{
+    max-width: 120rem; /*El max solo lo toma si esta disponible si no usa lo normal*/
+    /*margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;*/
+    margin: 0 auto 0 auto;
+
+}
+.nav-bg{
+    background-color: var(--secundario);
+
+}
+.navegacion-principal{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.navegacion-principal a{
+    display: block;/*alinea la navegacion vertical al centro*/
+    text-align: center;/*alinea la navegacion vertical al centro*/
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+      padding: 1rem;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: black;
+  
+}
+.navegacion-principal a:focus{
+    color: red;
+}
+
+@media (min-width:768px){
+    .navegacion-principal{
+        flex-direction: row;
+
+        
+    }
+}
+
+@media(min-width:720px){
+    body{
+        background-color:brown;
+    }
+}
+
+
+.hero{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    
+}
+
+@media(min-width:720px){
+   .grid{
+    
+    display: grid;
+    /*Denotacion tradicional*/
+    grid-template-columns: 900px 900px;
+    /*Denotacion avanzada*//*CON ESTA DENOTACION SIGNIFICA FRACIONES OSEA UN TERCIO*/
+    /*  grid-template-columns: 1fr 1fr 1fr*/
+    /*  grid-template-columns: repeat(3, 1fr)*/
+    grid-template-rows: 300px 200px ;
+    /*puedo separa los grid con colum gap y row gap*/
+    column-gap: 5rem;
+    row-gap: 5rem   ;
+}
+.pada{
+    padding: 25px 50px;
+}
+ 
+}
+
+.contenedor-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+.contenedor-hero h2,.contenedor-hero p {
+    color: var(--blanco);
+}
+
+.button{
+    display: block;
+    background-color: turquoise;
+    color: var(--primario);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    margin: 0 auto; /*esto fue lo que soluciono el centrado*/
+    width: 10%;
+    text-align: center;
+
+
+}
+
+.detail{
+    color: red;
+}
+.detail h2{
+    font-size: 5rem;
+}
+.detail div{
+    font-size: 2rem;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+
+}
+#content {border-bottom: 3px solid #4588ba; margin-bottom:10px;}
+
+.bb{
+    background-color: black;
+}
